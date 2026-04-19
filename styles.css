@@ -528,11 +528,28 @@ h1 {
   border-top: 1px solid rgba(203, 213, 221, 0.8);
 }
 
+.proof-headline {
+  display: grid;
+  gap: 0.55rem;
+  margin-bottom: 1.1rem;
+}
+
+.proof-headline h2 {
+  max-width: 12ch;
+  font-size: clamp(2.2rem, 4.2vw, 4rem);
+}
+
+.proof-strip-prominent {
+  gap: 1.1rem;
+  padding-top: 0;
+  border-top: 0;
+}
+
 .experience-strip {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
-  margin-bottom: 1.35rem;
+  margin-top: 1.45rem;
 }
 
 .experience-strip-card {
@@ -563,6 +580,11 @@ h1 {
   transition: transform 220ms ease, box-shadow 220ms ease;
 }
 
+.proof-item-feature {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(233, 238, 242, 0.9));
+  border-top-width: 4px;
+}
+
 .proof-item:hover {
   transform: translateY(-2px);
   box-shadow: 0 20px 46px rgba(20, 20, 20, 0.09);
@@ -580,8 +602,9 @@ h1 {
 
 .proof-item strong {
   display: block;
-  font-size: 1.12rem;
-  letter-spacing: -0.03em;
+  font-size: 1.42rem;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
 }
 
 .proof-item p {
