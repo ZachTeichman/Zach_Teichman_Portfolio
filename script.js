@@ -36,28 +36,46 @@ const headshotImage = document.querySelector(".headshot-image");
 const headshotPlaceholder = document.querySelector(".headshot-placeholder");
 
 if (headshotImage && headshotPlaceholder) {
-  headshotImage.addEventListener("load", () => {
+  const showHeadshot = () => {
     headshotImage.style.display = "block";
     headshotPlaceholder.style.display = "none";
-  });
+  };
 
-  headshotImage.addEventListener("error", () => {
+  const hideHeadshot = () => {
     headshotImage.style.display = "none";
     headshotPlaceholder.style.display = "flex";
-  });
+  };
+
+  if (headshotImage.complete && headshotImage.naturalWidth > 0) {
+    showHeadshot();
+  } else if (headshotImage.complete) {
+    hideHeadshot();
+  }
+
+  headshotImage.addEventListener("load", showHeadshot);
+  headshotImage.addEventListener("error", hideHeadshot);
 }
 
 const familyPhotoImage = document.querySelector(".family-photo-image");
 const familyPhotoPlaceholder = document.querySelector(".family-photo-placeholder");
 
 if (familyPhotoImage && familyPhotoPlaceholder) {
-  familyPhotoImage.addEventListener("load", () => {
+  const showFamilyPhoto = () => {
     familyPhotoImage.style.display = "block";
     familyPhotoPlaceholder.style.display = "none";
-  });
+  };
 
-  familyPhotoImage.addEventListener("error", () => {
+  const hideFamilyPhoto = () => {
     familyPhotoImage.style.display = "none";
     familyPhotoPlaceholder.style.display = "flex";
-  });
+  };
+
+  if (familyPhotoImage.complete && familyPhotoImage.naturalWidth > 0) {
+    showFamilyPhoto();
+  } else if (familyPhotoImage.complete) {
+    hideFamilyPhoto();
+  }
+
+  familyPhotoImage.addEventListener("load", showFamilyPhoto);
+  familyPhotoImage.addEventListener("error", hideFamilyPhoto);
 }
