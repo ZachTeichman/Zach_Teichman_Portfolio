@@ -261,20 +261,27 @@ h1 {
 }
 
 .logo-strip {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0.8rem;
   margin-top: 1.35rem;
 }
 
 .logo-chip {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.6rem;
-  padding: 0.55rem 0.8rem;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.7);
+  min-height: 92px;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid rgba(203, 213, 221, 0.7);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.78);
+  overflow: hidden;
+}
+
+.logo-chip-image {
+  padding: 0.75rem 0.9rem;
 }
 
 .logo-mark {
@@ -296,6 +303,40 @@ h1 {
   font-size: 0.92rem;
   font-weight: 700;
   color: var(--text);
+}
+
+.logo-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 180px;
+  max-height: 58px;
+  object-fit: contain;
+  transform-origin: center center;
+}
+
+.logo-image-uga {
+  max-width: 140px;
+  max-height: 44px;
+  transform: scale(2.35);
+}
+
+.logo-image-cogent {
+  max-width: 182px;
+  max-height: 54px;
+  transform: scale(1.18);
+}
+
+.logo-image-corcoran {
+  max-width: 128px;
+  max-height: 30px;
+  transform: scale(2.65);
+}
+
+.logo-image-orion {
+  max-width: 74px;
+  max-height: 74px;
+  transform: scale(1.4);
 }
 
 .button {
@@ -1096,6 +1137,14 @@ h1 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .logo-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .logo-chip {
+    min-height: 90px;
+  }
+
   .experience-strip {
     grid-template-columns: 1fr;
   }
@@ -1150,6 +1199,36 @@ h1 {
 
   .proof-strip {
     grid-template-columns: 1fr;
+  }
+
+  .logo-chip {
+    min-height: 84px;
+    padding: 0.7rem 0.85rem;
+  }
+
+  .logo-image {
+    max-width: min(40vw, 180px);
+    max-height: 50px;
+  }
+
+  .logo-image-uga {
+    max-width: min(30vw, 132px);
+    max-height: 38px;
+  }
+
+  .logo-image-cogent {
+    max-width: min(42vw, 182px);
+    max-height: 48px;
+  }
+
+  .logo-image-corcoran {
+    max-width: min(28vw, 118px);
+    max-height: 28px;
+  }
+
+  .logo-image-orion {
+    max-width: min(18vw, 68px);
+    max-height: 68px;
   }
 
   .proof-grid .info-card,
