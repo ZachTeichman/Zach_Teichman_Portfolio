@@ -260,6 +260,44 @@ h1 {
   margin-top: 2rem;
 }
 
+.logo-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.35rem;
+}
+
+.logo-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.logo-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2rem;
+  height: 2rem;
+  padding: 0 0.35rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.logo-name {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -490,6 +528,31 @@ h1 {
   border-top: 1px solid rgba(203, 213, 221, 0.8);
 }
 
+.experience-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.35rem;
+}
+
+.experience-strip-card {
+  padding: 1.35rem 1.4rem;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(233, 238, 242, 0.82));
+  box-shadow: var(--shadow);
+}
+
+.experience-strip-card h3 {
+  margin-top: 0.55rem;
+  font-size: 1.18rem;
+}
+
+.experience-strip-card p {
+  margin: 0.55rem 0 0;
+  color: var(--muted);
+}
+
 .proof-item {
   padding: 1.3rem 1.4rem;
   border-top: 2px solid var(--accent);
@@ -596,6 +659,77 @@ h1 {
   grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
   gap: 1rem;
   align-items: stretch;
+}
+
+.sample-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.sample-card {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.sample-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 46px rgba(20, 20, 20, 0.1);
+}
+
+.sample-card-primary {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(233, 238, 242, 0.84));
+}
+
+.sample-thumb {
+  display: grid;
+  gap: 0.45rem;
+  min-height: 170px;
+  padding: 1.1rem;
+  border-radius: 16px;
+  background:
+    linear-gradient(180deg, rgba(76, 98, 114, 0.12), rgba(23, 34, 45, 0.04)),
+    var(--surface-alt);
+  border: 1px solid rgba(203, 213, 221, 0.9);
+}
+
+.sample-thumb span,
+.sample-thumb small {
+  color: var(--muted);
+}
+
+.sample-thumb span {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.sample-thumb strong {
+  font-size: 1.55rem;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.sample-thumb small {
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
+.sample-body h3 {
+  margin-top: 0.45rem;
+  font-size: 1.18rem;
+}
+
+.sample-body p {
+  margin: 0.55rem 0 0;
+  color: var(--muted);
 }
 
 .spotlight-card {
@@ -926,7 +1060,8 @@ h1 {
   .analysis-grid,
   .credibility-layout,
   .featured-work-layout,
-  .pitch-banner {
+  .pitch-banner,
+  .sample-grid {
     grid-template-columns: 1fr;
   }
 
@@ -936,6 +1071,10 @@ h1 {
 
   .proof-strip {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .experience-strip {
+    grid-template-columns: 1fr;
   }
 
   .hero-headshot,
