@@ -262,7 +262,7 @@ h1 {
 
 .logo-strip {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 0.8rem;
   margin-top: 1.35rem;
 }
@@ -321,6 +321,12 @@ h1 {
   transform: scale(2.35);
 }
 
+.logo-image-tsc {
+  max-width: 104px;
+  max-height: 104px;
+  transform: scale(1.45);
+}
+
 .logo-image-cogent {
   max-width: 182px;
   max-height: 54px;
@@ -334,9 +340,9 @@ h1 {
 }
 
 .logo-image-orion {
-  max-width: 74px;
-  max-height: 74px;
-  transform: scale(1.4);
+  max-width: 72px;
+  max-height: 72px;
+  transform: scale(1.32);
 }
 
 .button {
